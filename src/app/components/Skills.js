@@ -13,7 +13,7 @@ const skillsData = {
         { skill: 'Python', icon: faPython, color: '#3776AB' },
         { skill: 'React', icon: faReact, color: '#61DAFB' },
         { skill: 'Node.js', icon: faNodeJs, color: '#8CC84B' },
-        { skill: 'Redux Toolkit', icon: faJs, color: '#764ABC' },
+        { skill: 'Redux', icon: faJs, color: '#764ABC' },
         { skill: 'HTML/CSS', icon: faHtml5, color: '#E44D26' },
         { skill: 'Bootstrap', icon: faBootstrap, color: '#563D7C' },
     ],
@@ -57,12 +57,12 @@ const Skills = () => {
                                         initial={{ opacity: 0, scale: 0.8 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 0.3, delay: 0.1 * skillsData[category].indexOf(skill) }}
-                                        className="flex flex-col items-center justify-center p-2 border border-transparent hover:border-yellow-500"
+                                        className="flex flex-col items-center justify-center p-2 border border-transparent "
                                     >
                                         <FontAwesomeIcon 
                                             icon={icon} 
                                             className="mb-1 text-2xl" 
-                                            style={{ color }} // Set the icon color
+                                            style={{ color }} 
                                         />
                                         {skill}
                                     </motion.li>
