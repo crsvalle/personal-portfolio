@@ -1,4 +1,5 @@
-import Navbar from "./components/Navbar";
+import AboutMe from "./components/AboutMe";
+import Skills from "./components/Skills";
 
 
 export default function Home() {
@@ -6,12 +7,10 @@ export default function Home() {
     <div>
 
       <section id="about" className="py-20">
-        <h2>About Me</h2>
-        <p>This is the About Me section.</p>
+        <AboutMe />
       </section>
-      <section id="contact" className="py-20">
-        <h2>Contact</h2>
-        <p>This is the Contact section.</p>
+      <section id="skills" className="py-20">
+        <Skills />
       </section>
     </div>
   );

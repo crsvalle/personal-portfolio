@@ -6,7 +6,7 @@ export default function Navbar() {
         <nav className="nav-menu costum-navbar">
             <div className="max-container flex justify-between items-center px-6">
                 <Link href="/" className="navbar-brand">
-                    crs<span className="text-green-600">valle</span>
+                    crs<span className="text-yellow-600">valle</span>
                 </Link>
                 <ul className="hidden h-full gap-6 lg:flex px-6 py-3">
                     <li>
