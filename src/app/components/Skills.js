@@ -3,6 +3,8 @@ import './Skills.css';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faJs, faReact, faPython, faNodeJs, faJava, faGit, faHtml5, faBootstrap } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faCode, faServer } from '@fortawesome/free-solid-svg-icons';
+
 
 const skillsData = {
     frontend: [
@@ -18,23 +20,23 @@ const skillsData = {
     backend: [
         { skill: 'Node.js', icon: faNodeJs, color: '#8CC84B' },
         { skill: 'Express', icon: faNodeJs, color: '#8CC84B' },
-        { skill: 'PostgreSQL'},
+        { skill: 'PostgreSQL', icon:faDatabase, color: '#00599C'},
         { skill: 'Java', icon: faJava, color: '#007396' },
-        { skill: 'C++'},
+        { skill: 'C++', icon:faCode, color: '#00599C'},
     ],
     tools: [
         { skill: 'Git', icon: faGit, color: '#F05032' },
-        { skill: 'Postman'},
-        { skill: 'MaterialUI'}, 
-        { skill: 'Firebase'}, 
-        { skill: 'TailwindCSS'}, 
+        { skill: 'Postman', icon:faDatabase, color: '#00599C'},
+        { skill: 'MaterialUI', icon:faCode, color: '#00599C'}, 
+        { skill: 'Firebase', icon:faServer, color: '#00599C'}, 
+        { skill: 'TailwindCSS', icon:faCode, color: '#00599C'}, 
     ],
 };
 
 const Skills = () => {
     return (
         <section className="skills-section py-10 bg-black text-white">
-            <div className="skill-box mx-auto p-8 rounded-lg shadow-lg">
+            <div className="skill-box mx-auto p-8 rounded-lg shadow-lg ">
                 <h2 className="text-3xl font-bold text-center mb-5 skills-title">SKILLS</h2>
                 <div className="grid grid-cols-3 gap-4">
                     {Object.keys(skillsData).map((category) => (
