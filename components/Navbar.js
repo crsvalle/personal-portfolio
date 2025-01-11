@@ -19,7 +19,7 @@ export default function Navbar() {
     }, []);
 
     const handleScrollToSection = (event, id) => {
-        event.preventDefault(); 
+        event.preventDefault();
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
@@ -32,7 +32,7 @@ export default function Navbar() {
                 <Link href="/" className="navbar-brand">
                     crs<span className="text-yellow-600">valle</span>
                 </Link>
-            
+
                 <ul className={`hidden h-full gap-6 lg:flex px-6 py-3`}>
                     <li>
                         <Link href="#about" className="nav-item menu-item" onClick={(event) => handleScrollToSection(event, 'about')}>
@@ -45,13 +45,13 @@ export default function Navbar() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#contact" className="nav-item menu-item" onClick={(event) => handleScrollToSection(event, 'contact')}>
-                            Contact
+                        <Link href="#skills" className="nav-item menu-item" onClick={(event) => handleScrollToSection(event, 'skills')}>
+                            Skills
                         </Link>
                     </li>
                     <li>
-                        <Link href="#skills" className="nav-item menu-item" onClick={(event) => handleScrollToSection(event, 'skills')}>
-                            Skills
+                        <Link href="#contact" className="nav-item menu-item" onClick={(event) => handleScrollToSection(event, 'contact')}>
+                            Contact
                         </Link>
                     </li>
                 </ul>
