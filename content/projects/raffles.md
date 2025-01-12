@@ -1,6 +1,6 @@
 ---
   title: Raffles
-  summary: A mini lottery ticket application where users can participate in raffles by purchasing tickets.
+  summary: A mini lottery ticket application where users can participate and create raffles without creating an account.
   image: raffles.jpg
   author: 'Cristian Valle'
   publishedAt: '2024-04-23'

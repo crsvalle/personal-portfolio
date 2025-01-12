@@ -2,9 +2,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Projects({ projects }) {
+    const sortedProjects = projects
+        .sort((a, b) => {
+            if (a.publishedAt === "current") return -1; 
+            if (b.publishedAt === "current") return 1;
+            return new Date(b.publishedAt) - new Date(a.publishedAt);
+        })
+        .slice(0, 3);
+
     return (
         <ul className="grid gap-8 max-w-4xl">
-            {projects.map(project => (
+            {sortedProjects.map(project => (
                 <li key={project.slug} className="group flex flex-col sm:flex-row items-start gap-6">
                     <Link href={`/projects/${project.slug}`} className="flex flex-col sm:flex-row items-start gap-6">
                         {project.image && (
@@ -35,5 +43,5 @@ export default function Projects({ projects }) {
                 </li>
             ))}
         </ul>
-    )
+    );
 }
