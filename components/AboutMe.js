@@ -8,7 +8,7 @@ export default function AboutMe() {
           <h1 className="text-3xl font-bold decoration-border/75 decoration-2 underline-offset-8">
             Hey, I&#39;m Cristian Valle.
           </h1>
-          <p className="mt-3 text-muted-foreground">
+          <p className="mt-3 font-light text-muted-foreground">
             I&#39;m a software engineer based in New York City. I&#39;m
             passionate about learning new technologies. Currently, I'm 
             working on a project that leverages image recognition to identify 
