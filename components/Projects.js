@@ -10,7 +10,7 @@ export default function Projects({ projects }) {
                         {project.image && (
                             <div className="w-full sm:w-1/3 h-40 relative bg-muted overflow-hidden">
                                 <Image
-                                    src={project.image}
+                                    src={`/${project.image}`}
                                     alt={project.title || ''}
                                     fill
                                     className="rounded-lg object-cover object-center transition-transform duration-500 group-hover:scale-105"
