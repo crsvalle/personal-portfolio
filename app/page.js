@@ -1,6 +1,8 @@
-import AboutMe from "../components/AboutMe";
-import Skills from "../components/Skills";
-import RecentProjects from "@/recent-projects";
+import ContactForm from "@/components/contact-form";
+import AboutMe from "@/components/AboutMe";
+import Skills from "@/components/Skills";
+import RecentProjects from "@/components/Recent-projects";
+
 
 export default function Home() {
   return (
@@ -9,6 +11,7 @@ export default function Home() {
         <AboutMe />
         <RecentProjects />
         <Skills />
+        <ContactForm />
       </div>
     </main>
   );
