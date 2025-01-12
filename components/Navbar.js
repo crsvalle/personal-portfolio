@@ -23,13 +23,12 @@ export default function Navbar() {
         const element = document.getElementById(id);
         if (element) {
             window.scrollTo({
-                top: element.offsetTop - 60,
-                behavior: 'smooth',
+                top: element.offsetTop - 100,
+                behavior: 'smooth'
             });
         }
     };
     
-
     return (
         <nav className={`nav-menu ${scrolling ? "costum-navbar" : ""}`}>
             <div className="max-container flex justify-between items-center px-6">

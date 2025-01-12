@@ -1,7 +1,7 @@
 ---
   title: Keepsake
   summary: A full-stack application for storing and managing your keepsakes.
-  image: /images/projects/keepsake.jpg
+  image: keepsake.png
   author: 'Cristian Valle'
   publishedAt: '2024-01-12'
 ---
