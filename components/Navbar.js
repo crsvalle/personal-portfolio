@@ -22,9 +22,13 @@ export default function Navbar() {
         event.preventDefault();
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            window.scrollTo({
+                top: element.offsetTop - 60,
+                behavior: 'smooth',
+            });
         }
     };
+    
 
     return (
         <nav className={`nav-menu ${scrolling ? "costum-navbar" : ""}`}>
@@ -40,7 +44,7 @@ export default function Navbar() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#project" className="nav-item menu-item" onClick={(event) => handleScrollToSection(event, 'project')}>
+                        <Link href="#projects" className="nav-item menu-item" onClick={(event) => handleScrollToSection(event, 'projects')}>
                             Projects
                         </Link>
                     </li>
