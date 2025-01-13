@@ -6,7 +6,7 @@ import RecentProjects from "@/components/Recent-projects";
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-6 py-10 bg-black text-white">
+    <main className="min-h-screen px-6 py-10  text-white">
       <div className="flex flex-col items-center gap-y-20">
         <AboutMe />
         <RecentProjects />

@@ -4,6 +4,7 @@
   image: keepsake.png
   author: 'Cristian Valle'
   publishedAt: '2024-01-12'
+  link: "https://keepssake.netlify.app/"
 ---
 
 It provides a platform for individuals or businesses to rent out empty storage spaces. Users can list available storage units, set rental prices, and manage bookings. Renters can browse available storage spaces based on location, size, and pricing, and book the storage unit that best suits their needs. 

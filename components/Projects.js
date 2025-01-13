@@ -13,8 +13,8 @@ export default function Projects({ projects }) {
     return (
         <ul className="grid gap-8 max-w-4xl">
             {sortedProjects.map(project => (
-                <li key={project.slug} className="group flex flex-col sm:flex-row items-start gap-6">
-                    <Link href={`/projects/${project.slug}`} className="flex flex-col sm:flex-row items-start gap-6">
+                <li key={project.title} className="group flex flex-col sm:flex-row items-start gap-6">
+                    <Link href={`${project.link}`} className="flex flex-col sm:flex-row items-start gap-6">
                         {project.image && (
                             <div className="w-full sm:w-1/3 h-40 relative bg-muted overflow-hidden">
                                 <Image
