@@ -4,6 +4,7 @@
   image: pixelponder.jpg
   author: 'Cristian Valle'
   publishedAt: '2023-11-20'
+  link: "https://forum-discussion.onrender.com/"
   technology: 
     - React
     - PostgreSQL
