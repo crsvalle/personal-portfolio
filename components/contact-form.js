@@ -26,18 +26,21 @@ export default function ContactForm() {
   })
 
   const processForm = async (data) => {
-
-    const result = await sendEmail(data)
-
-    if (result?.error) {
-      
-      toast.error('An error occurred! Please try again.')
-      return
+    try {
+      const result = await sendEmail(data);
+      console.log(result.success)
+      if (result.error) {
+        toast.error(result.error || 'An error occurred! Please try again.');
+        return;
+      }
+      toast.success('Message sent successfully!');
+      reset();
+    } catch (err) {
+      toast.error('Something went wrong. Please try again later.');
+      console.error(err);
     }
+  };
 
-    toast.success('Message sent successfully!')
-    reset()
-  }
 
   return (
     <section className='relative isolate bg-black text-white' id="contact">
