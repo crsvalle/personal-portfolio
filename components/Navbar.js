@@ -1,10 +1,12 @@
 'use client';
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation"; 
 import Link from "next/link";
 import "./Navbar.css";
 
 export default function Navbar() {
     const [scrolling, setScrolling] = useState(false);
+    const pathname = usePathname(); 
 
     useEffect(() => {
         const handleScroll = () => {
@@ -13,6 +15,7 @@ export default function Navbar() {
         };
 
         window.addEventListener("scroll", handleScroll);
+
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
@@ -24,11 +27,11 @@ export default function Navbar() {
         if (element) {
             window.scrollTo({
                 top: element.offsetTop - 100,
-                behavior: 'smooth'
+                behavior: 'smooth',
             });
         }
     };
-    
+
     return (
         <nav className={`nav-menu ${scrolling ? "costum-navbar" : ""}`}>
             <div className="max-container flex justify-between items-center px-6">
@@ -37,26 +40,46 @@ export default function Navbar() {
                 </Link>
 
                 <ul className={`hidden h-full gap-6 lg:flex px-6 py-3`}>
-                    <li>
-                        <Link href="#about" className="nav-item menu-item" onClick={(event) => handleScrollToSection(event, 'about')}>
-                            About
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#projects" className="nav-item menu-item" onClick={(event) => handleScrollToSection(event, 'projects')}>
-                            Projects
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#skills" className="nav-item menu-item" onClick={(event) => handleScrollToSection(event, 'skills')}>
-                            Skills
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#contact" className="nav-item menu-item" onClick={(event) => handleScrollToSection(event, 'contact')}>
-                            Contact
-                        </Link>
-                    </li>
+                    {pathname== "/" && (
+                        <>
+                            <li>
+                                <Link
+                                    href="#about"
+                                    className="nav-item menu-item"
+                                    onClick={(event) => handleScrollToSection(event, "about")}
+                                >
+                                    About
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="#projects"
+                                    className="nav-item menu-item"
+                                    onClick={(event) => handleScrollToSection(event, "projects")}
+                                >
+                                    Projects
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="#skills"
+                                    className="nav-item menu-item"
+                                    onClick={(event) => handleScrollToSection(event, "skills")}
+                                >
+                                    Skills
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="#contact"
+                                    className="nav-item menu-item"
+                                    onClick={(event) => handleScrollToSection(event, "contact")}
+                                >
+                                    Contact
+                                </Link>
+                            </li>
+                        </>
+                    )}
                 </ul>
             </div>
         </nav>
