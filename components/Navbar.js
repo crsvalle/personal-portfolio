@@ -40,7 +40,7 @@ export default function Navbar() {
                 </Link>
 
                 <ul className={`hidden h-full gap-6 lg:flex px-6 py-3`}>
-                    {pathname== "/" && (
+                    {pathname === "/" ? (
                         <>
                             <li>
                                 <Link
@@ -79,9 +79,16 @@ export default function Navbar() {
                                 </Link>
                             </li>
                         </>
+                    ) : (
+                        <li>
+                            <Link href="/" className="nav-item menu-item">
+                                Home
+                            </Link>
+                        </li>
                     )}
                 </ul>
             </div>
         </nav>
     );
 }
+
