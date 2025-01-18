@@ -28,7 +28,6 @@ export default function ContactForm() {
   const processForm = async (data) => {
     try {
       const result = await sendEmail(data);
-      console.log(result.success)
       if (result.error) {
         toast.error(result.error || 'An error occurred! Please try again.');
         return;
@@ -37,7 +36,7 @@ export default function ContactForm() {
       reset();
     } catch (err) {
       toast.error('Something went wrong. Please try again later.');
-      console.error(err);
+
     }
   };
 
