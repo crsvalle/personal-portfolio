@@ -1,6 +1,5 @@
-
 import "./globals.css";
-
+import { Toaster } from "sonner"; 
 import Navbar from "../components/Navbar";
 
 export const metadata = {
@@ -11,10 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-      >
+      <body>
         <Navbar />
         {children}
+        <Toaster position="top-right" richColors /> 
       </body>
     </html>
   );
