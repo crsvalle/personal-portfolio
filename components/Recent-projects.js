@@ -6,7 +6,7 @@ export default async function RecentProjects() {
     const projects = await getProjects(0)
 
     return (
-        <section id="projects" className=""> 
+        <section id="projects" className="pb-24"> 
             <div>
                 <h2 className=' mb-10'>Recent projects</h2>
                 <Projects projects={projects} />
