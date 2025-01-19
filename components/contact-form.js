@@ -42,7 +42,7 @@ export default function ContactForm() {
 
 
   return (
-    <section className='relative isolate bg-black text-white' id="contact">
+    <section className='relative isolate bg-black text-white pb-24' id="contact">
       <svg
         className='absolute inset-0 -z-10 h-full w-full stroke-zinc-700 opacity-25 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] dark:stroke-zinc-700'
         aria-hidden='true'
