@@ -1,10 +1,13 @@
 import "./globals.css";
-import { Toaster } from "sonner"; 
+import { Toaster } from "sonner";
 import Navbar from "../components/Navbar";
 
 export const metadata = {
   title: "Cristian Valle",
   description: "",
+  icons: {
+    icon: '/developer.png', 
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -13,7 +16,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         {children}
-        <Toaster position="top-right" richColors /> 
+        <Toaster position="top-right" richColors />
       </body>
     </html>
   );
