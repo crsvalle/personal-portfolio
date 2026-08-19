@@ -8,8 +8,8 @@ export default function ProjectsAccordion({ projects }) {
     const [openSlug, setOpenSlug] = useState(null)
 
     const sortedProjects = [...projects].sort((a, b) => {
-        if (a.publishedAt === "current") return -1;
-        if (b.publishedAt === "current") return 1;
+        if (a.status === 'current') return -1;
+        if (b.status === 'current') return 1;
         return new Date(b.publishedAt) - new Date(a.publishedAt);
     });
 
@@ -18,7 +18,7 @@ export default function ProjectsAccordion({ projects }) {
     };
 
     return (
-        <ul className="flex flex-col gap-4 max-w-4xl">
+        <ul className="flex flex-col gap-4 max-w-4xl mx-auto">
             {sortedProjects.map(project => {
                 const isOpen = openSlug === project.slug;
 
@@ -30,11 +30,11 @@ export default function ProjectsAccordion({ projects }) {
                         <button
                             type="button"
                             onClick={() => toggle(project.slug)}
-                            className="w-full flex flex-col sm:flex-row items-start gap-6 p-6 text-left"
+                            className="w-full flex items-center gap-6 p-5 text-left"
                             aria-expanded={isOpen}
                         >
                             {project.image && (
-                                <div className="w-full sm:w-1/3 h-40 relative bg-muted overflow-hidden rounded-lg shrink-0">
+                                <div className="w-28 h-20 relative bg-muted overflow-hidden rounded-lg shrink-0">
                                     <Image
                                         src={`/${project.image}`}
                                         alt={project.title || ''}
@@ -44,25 +44,17 @@ export default function ProjectsAccordion({ projects }) {
                                 </div>
                             )}
 
-                            <div className="flex-1 relative">
-                                <div className="flex items-center justify-between gap-4">
-                                    <h2 className="text-xl font-bold mb-2">{project.title}</h2>
-                                    <span
-                                        className={`text-muted-foreground transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''
-                                            }`}
-                                    >
-                                        ▾
-                                    </span>
-                                </div>
-                                <p className="text-sm text-muted-foreground mb-2">{project.summary}</p>
-                                <p className="text-xs font-light text-muted-foreground">
-                                    {project.publishedAt && project.publishedAt !== 'current'
-                                        ? new Date(project.publishedAt).toLocaleDateString()
-                                        : project.publishedAt === 'current'
-                                            ? 'Current'
-                                            : ''}
-                                </p>
+                            <div className="flex-1 relative min-w-0">
+                                <h2 className="text-lg font-bold mb-1 truncate">{project.title}</h2>
+                                <p className="text-sm text-muted-foreground truncate">{project.summary}</p>
                             </div>
+
+                            <span
+                                className={`text-muted-foreground transition-transform duration-300 shrink-0 ${isOpen ? 'rotate-180' : ''
+                                    }`}
+                            >
+                                ▾
+                            </span>
                         </button>
 
                         <div
@@ -71,8 +63,16 @@ export default function ProjectsAccordion({ projects }) {
                         >
                             <div className="overflow-hidden">
                                 <div className="px-6 pb-6 pt-2 border-t border-white/10">
+                                    <p className="text-xs font-light text-muted-foreground mt-4 mb-2">
+                                        {project.status === 'current'
+                                            ? 'Work in progress'
+                                            : project.publishedAt
+                                                ? new Date(project.publishedAt).toLocaleDateString()
+                                                : ''}
+                                    </p>
+
                                     {project.technology && Array.isArray(project.technology) && (
-                                        <div className="flex flex-wrap gap-2 mb-4 mt-4">
+                                        <div className="flex flex-wrap gap-2 mb-4">
                                             {project.technology.map(tech => (
                                                 <span
                                                     key={tech}
