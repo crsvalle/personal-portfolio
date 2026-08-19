@@ -3,7 +3,7 @@ title: Real-Time Car Detection
 summary: An app that uses AI to learn and detect vehicles from images.
 image: real-time.png
 author: 'Cristian Valle'
-publishedAt: ''
+publishedAt: 'current'
 status: current
 link: 'https://github.com/crsvalle/real-time-detection-frontend'
 technology:
