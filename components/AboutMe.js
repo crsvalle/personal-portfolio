@@ -10,7 +10,7 @@ export default function AboutMe() {
           </h1>
           <p className="mt-3 font-light text-muted-foreground">
             I&apos;m a software engineer based in New York City. I&apos;m
-            passionate about learning new technologies. Currently, I&apos;m 
+            passionate about learning new technologies. Currently, I&apos;m
             working on a Esthetician Booking Website with appointment scheduling, 
             availability management and Stripe checkout for deposits.
           </p>
