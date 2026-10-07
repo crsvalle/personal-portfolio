@@ -3,7 +3,7 @@ title: Bare Kare Studio
 summary: A booking and admin management app for a waxing and beauty studio, with scheduling and Stripe deposits.
 image: bare-kare-studio.png
 author: 'crsvall'
-publishedAt: 'YYYY-MM-DD'
+publishedAt: '2026-10-02'
 status: current
 link: 'https://github.com/crsvalle/REPO-NAME'
 technology:
